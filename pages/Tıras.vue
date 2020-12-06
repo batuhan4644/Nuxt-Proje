@@ -117,9 +117,12 @@
                           </h1>
                           <ul class="product-profile-info">
                             <li>
-                             <div class="product-reviews">
-                                    <img height="20" width="60" src="../assets/Yıldız.PNG" />
-                                
+                              <div class="product-reviews">
+                                <img
+                                  height="20"
+                                  width="60"
+                                  src="../assets/Yıldız.PNG"
+                                />
                               </div>
                             </li>
                             <li>Ürün Kodu: <span class="value">Y-5</span></li>
@@ -161,7 +164,10 @@
                                     'decrement',
                                     'div[data-product-id=\'2998\'] .product-quantity'
                                 )"
-                                ><img height="20" width="20 " src="../assets/Eksi.PNG" /></a
+                                ><img
+                                  height="20"
+                                  width="20 "
+                                  src="../assets/Eksi.PNG" /></a
                               ><input
                                 class="form-control"
                                 name="quantity"
@@ -181,34 +187,28 @@
                                     'increment',
                                     'div[data-product-id=\'2998\'] .product-quantity'
                                 )"
-                                ><img height="20" width="20 " src="../assets/Artı.PNG" /></a>
+                                ><img
+                                  height="20"
+                                  width="20 "
+                                  src="../assets/Artı.PNG"
+                              /></a>
                             </div>
-                            <button
-                              class="btn btn-cart btn-color-1"
-                              onclick="addCart(
-                                    2998, 
-                                    'product', 
-                                    {
-                                                                                quantity: $('div[data-product-id=\'2998\'] input[name=quantity]').val(),
-                                    }
-                                )"
-                            >
-                              <img height="20" width="20 " src="../assets/SepetEkle.PNG" />
-                              Sepete Ekle</button
-                            ><button
+                           <a
+                              href="/sepet"
+                              class="btn btn-fast-buy btn-color-1"
+                              target="_blank"
+                              ><img height="20" width="20 " src="../assets/SepetEkle.PNG" />
+                              Sepete Ekle
+                            </a>
+                            <a
+                              href="/sepet"
                               class="btn btn-fast-buy btn-color-2"
-                              onclick="addCart(
-                                    2998, 
-                                    'product', 
-                                    {
-                                        redirectPayment: true,
-                                                                                quantity: $('div[data-product-id=\'2998\'] input[name=quantity]').val(),
-                                    }
-                                )"
-                            >
-                              <img height="20" width="20 " src="../assets/tl.PNG" />
-                              Hemen Al</button
-                            ><a
+                              target="_blank"
+                              ><img height="20" width="20 " src="../assets/tl.PNG" />
+                              Hemen Al
+                            </a>
+                            
+                            <a
                               href="/"
                               class="btn btn-wp"
                               target="_blank"
@@ -224,8 +224,7 @@
                               href="/sepet"
                               class="d-block add-favorite"
                               onclick="userProductFavourite('add', 2998)"
-                              ><i class="far fa-heart"></i>
-                              Favorilerime ekle </a
+                              > <img  src="../assets/urundetayimages/kalp.PNG" /> Favorilerime ekle </a
                             ><a
                               href="javascript:;"
                               class="d-none remove-favorite"
@@ -236,16 +235,16 @@
                           </div>
                           <div class="product-badges">
                             <div class="p-badge shipping-fast">
-                              <i class="fas fa-shipping-fast"></i
-                              ><span>Hızlı Gönderi</span>
+                              <img  src="../assets/urundetayimages/hizligonderim1.PNG" />
+                              <span>Hızlı Gönderi</span>
                             </div>
                             <div class="p-badge door-payment">
-                              <i class="fas fa-shield-alt"></i
-                              ><span>Güvenli Alışveriş</span>
+                              <img  src="../assets/urundetayimages/guvenlialısveris1.PNG" />
+                              <span>Güvenli Alışveriş</span>
                             </div>
                             <div class="p-badge credit-card">
-                              <i class="fas fa-retweet"></i
-                              ><span>İade ve Değişim</span>
+                              <img  src="../assets/urundetayimages/iade1.PNG" />
+                              <span>İade ve Değişim</span>
                             </div>
                           </div>
                           <div class="social-share jssocials">
@@ -257,7 +256,11 @@
                                   target="_blank"
                                   href="/"
                                   class="jssocials-share-link"
-                                  ><img height="20" width="20 " src="../assets/Twitter.PNG" /></a>
+                                  ><img
+                                    height="20"
+                                    width="20 "
+                                    src="../assets/Twitter.PNG"
+                                /></a>
                               </div>
                               <div
                                 class="jssocials-share jssocials-share-facebook"
@@ -266,7 +269,11 @@
                                   target="_blank"
                                   href="/"
                                   class="jssocials-share-link"
-                                  ><img height="20" width="20 " src="../assets/Facebook.PNG" /></a>
+                                  ><img
+                                    height="20"
+                                    width="20 "
+                                    src="../assets/Facebook.PNG"
+                                /></a>
                               </div>
                               <div
                                 class="jssocials-share jssocials-share-linkedin"
@@ -275,7 +282,11 @@
                                   target="_blank"
                                   href="/"
                                   class="jssocials-share-link"
-                                  ><img height="20" width="20 " src="../assets/Linkedin.PNG" /></a>
+                                  ><img
+                                    height="20"
+                                    width="20 "
+                                    src="../assets/Linkedin.PNG"
+                                /></a>
                               </div>
                               <div
                                 class="jssocials-share jssocials-share-whatsapp"
@@ -284,7 +295,11 @@
                                   target="_self"
                                   href="/"
                                   class="jssocials-share-link"
-                                  ><img height="20" width="20 " src="../assets/Whatsapp.PNG" /></a>
+                                  ><img
+                                    height="20"
+                                    width="20 "
+                                    src="../assets/Whatsapp.PNG"
+                                /></a>
                               </div>
                             </div>
                           </div>

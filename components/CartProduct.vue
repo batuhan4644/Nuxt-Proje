@@ -35,30 +35,25 @@
                               <td class="td-product">
                                 <div class="product">
                                   <div class="image">
-                                    <a
-                                      href="https://www.toptanal.com/renkli-ahsap-denge-oyunu-urun3601.html"
+                                    <a href="/RenkliAhsapDenge"
                                       ><img
                                         class="lazy-load lazy-complete"
                                         alt=""
-                                        src="https://www.toptanal.com/cdn/2/100/100/images/urunler/5fc50a217e3e8-49991.jpg"
+                                        src="../assets/sepeturunkucuk1.jpg"
                                         style=""
                                     /></a>
                                   </div>
                                   <div class="p-info">
-                                    <a
-                                      href="https://www.toptanal.com/renkli-ahsap-denge-oyunu-urun3601.html"
-                                      class="name"
-                                    >
+                                    <a href="/RenkliAhsapDenge" class="name">
                                       Renkli Ahşap Denge Oyunu
                                     </a>
                                     <div class="variants"></div>
-                                    <button
+
+                                    <a
+                                      href="/"
                                       class="btn btn-danger btn-remove"
-                                      type="button"
-                                      onclick="removeCart(4072, 'refresh-page')"
-                                    >
-                                      Sil
-                                    </button>
+                                      >Sil
+                                    </a>
                                   </div>
                                 </div>
                               </td>
@@ -70,13 +65,8 @@
                                   <a
                                     href="/sepet"
                                     class="btn btn-minus"
-                                    onclick="productQuantityBox(
-                                                'decrement',
-                                                'tr[data-cart-product-id=\'4072\'] .product-quantity'
-                                            );
-                                            updateCartQuantity(4072, 'table', 'tr[data-cart-product-id=\'4072\'] input', 'refresh-page');
-                                            "
-                                    ><i class="fas fa-minus"></i></a
+                                    
+                                    ><img  src="../assets/Eksi.PNG" /></a
                                   ><input
                                     class="form-control"
                                     data-base-value="1"
@@ -85,23 +75,14 @@
                                     max="9999"
                                     maxlength="4"
                                     value="1"
-                                    onkeypress="return productQuantityBox(
-                                                'change',
-                                                'tr[data-cart-product-id=\'4072\'] .product-quantity',
-                                                event
-                                            );"
-                                    onchange="updateCartQuantity(4072, 'table', 'tr[data-cart-product-id=\'4072\'] input', 'refresh-page');"
+                                   
+  
                                   /><a
                                     href="javascript:;"
                                     class="btn btn-plus"
-                                    onclick="productQuantityBox(
-                                                'increment',
-                                                'tr[data-cart-product-id=\'4072\'] .product-quantity'
-                                            );
-                                            updateCartQuantity(4072, 'table', 'tr[data-cart-product-id=\'4072\'] input', 'refresh-page');
-                                            "
-                                    ><i class="fas fa-plus"></i
-                                  ></a>
+                                  
+                                    ><img  src="../assets/Artı.PNG" />
+                                    </a>
                                 </div>
                               </td>
                               <td class="td-total-price">
@@ -113,10 +94,8 @@
                       </div>
                     </div>
                     <div class="shopping-buttons-1">
-                      <a
-                        href="/"
-                        class="btn btn-light btn-continue"
-                        ><i class="fa fa-chevron-left"></i> Alışverişe Devam Et
+                      <a href="/" class="btn btn-light btn-continue"
+                        ><img  src="../assets/leftc.PNG" /> Alışverişe Devam Et
                       </a>
                     </div>
                   </div>
@@ -164,12 +143,10 @@
                 <div class="p-g-mod p-g-mod-t-38 p-g-mod-trans">
                   <div class="p-g-mod-body p-g-mod-body-p-0">
                     <div class="payment-final-buttons-1">
-                      <a
-                        href="/uye-giris"
-                        class="btn btn-complete btn-theme-1"
-                      >
-                        Alışverişi Tamamla <i class="fa fa-chevron-right"></i
-                      ></a>
+                      <a href="/uye-giris" class="btn btn-complete btn-theme-1">
+                        Alışverişi Tamamla 
+                        <img  src="../assets/Right1.PNG" /> 
+                        </a>
                     </div>
                   </div>
                 </div>

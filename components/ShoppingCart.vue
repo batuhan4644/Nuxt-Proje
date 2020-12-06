@@ -154,28 +154,28 @@
                               href="/sepet"
                               class="d-block add-favorite"
                               onclick="userProductFavourite('add', 3601)"
-                              ><i class="far fa-heart"></i>
+                              ><img  src="../assets/urundetayimages/kalp.PNG" />
                               Favorilerime ekle </a
                             ><a
                               href="javascript:;"
                               class="d-none remove-favorite"
                               onclick="userProductFavourite('remove', 3601)"
-                              ><i class="fa fa-heart"></i>
+                              ><img  src="../assets/urundetayimages/iade1.PNG" />
                               Favorilerimden çıkar
                             </a>
                           </div>
                           <div class="product-badges">
                             <div class="p-badge shipping-fast">
-                              <i class="fas fa-shipping-fast"></i
-                              ><span>Hızlı Gönderi</span>
+                             <img  src="../assets/urundetayimages/hizligonderim1.PNG" />
+                             <span>Hızlı Gönderi</span>
                             </div>
                             <div class="p-badge door-payment">
-                              <i class="fas fa-shield-alt"></i
-                              ><span>Güvenli Alışveriş</span>
+                              <img  src="../assets/urundetayimages/guvenlialısveris1.PNG" />
+                              <span>Güvenli Alışveriş</span>
                             </div>
                             <div class="p-badge credit-card">
-                              <i class="fas fa-retweet"></i
-                              ><span>İade ve Değişim</span>
+                              <img  src="../assets/urundetayimages/iade1.PNG" />
+                              <span>İade ve Değişim</span>
                             </div>
                           </div>
                           <div class="social-share jssocials">

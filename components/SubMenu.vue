@@ -60,43 +60,43 @@
           <div class="row">
             <div class="col">
               <div class="box">
-                <i class="fas fa-shipping-fast"></i
-                ><span class="name-1">KAPIDA ÖDEME</span
+                <img  src="../assets/subimages/kapidaodeme.PNG" />
+                <span class="name-1">KAPIDA ÖDEME</span
                 ><span class="name-2">Nakit &amp; Kredi Kartı</span>
               </div>
             </div>
             <div class="col">
               <div class="box">
-                <i class="fab fa-whatsapp"></i
-                ><span class="name-1">WHATSAPP</span
+                 <img  src="../assets/subimages/whatsappsub.PNG" />
+                <span class="name-1">WHATSAPP</span
                 ><span class="name-2">9005544711414</span>
               </div>
             </div>
             <div class="col">
               <div class="box">
-                <i class="fas fa-retweet"></i
-                ><span class="name-1">İADE &amp; DEĞİŞİM</span
+                <img  src="../assets/subimages/sub3.PNG" />
+               <span class="name-1">İADE &amp; DEĞİŞİM</span
                 ><span class="name-2">14 Gün Koşulsuz</span>
               </div>
             </div>
             <div class="col">
               <div class="box">
-                <i class="fas fa-box-open"></i
-                ><span class="name-1">ÜCRETSİZ KARGO</span
+                 <img  src="../assets/subimages/ucretsizıadesub.PNG" />
+                <span class="name-1">ÜCRETSİZ KARGO</span
                 ><span class="name-2">Yurtiçi Tüm Kargolar</span>
               </div>
             </div>
             <div class="col">
               <div class="box">
-                <i class="far fa-credit-card"></i
-                ><span class="name-1">12 TAKSİT</span
+                 <img  src="../assets/subimages/12taksitsub.PNG" />
+                <span class="name-1">12 TAKSİT</span
                 ><span class="name-2">Tüm Kredi Kartlarına</span>
               </div>
             </div>
             <div class="col">
               <div class="box">
-                <i class="fas fa-plane"></i
-                ><span class="name-1">YURTDIŞI KARGO</span
+                 <img  src="../assets/subimages/Yurtdisikargosub.PNG" />
+                <span class="name-1">YURTDIŞI KARGO</span
                 ><span class="name-2">Tüm Dünyaya Kargo</span>
               </div>
             </div>
@@ -119,23 +119,22 @@
                   href="/"
                   class="fb"
                   target="_blank"
-                  ><i class="fab fa-facebook-square"></i></a
+                  > <img  src="../assets/subimages/facebooksub.PNG" /></a
                 ><a
                   href="/"
                   class="tw"
                   target="_blank"
-                  ><i class="fab fa-twitter"></i></a
+                  > <img  src="../assets/subimages/twittersub.PNG" /></a
                 ><a
                   href="/"
                   class="ins"
                   target="_blank"
-                  ><i class="fab fa-instagram"></i></a
+                  > <img  src="../assets/subimages/ınstagramsub.PNG" /></a
                 ><a
                   href="/"
                   class="yt"
                   target="_blank"
-                  ><i class="fab fa-youtube"></i
-                ></a>
+                  > <img  src="../assets/subimages/youtubesub.PNG" /></a>
               </div>
               <div class="secure mt-2">
                 <div class="title-3">%100 Güvenli Ödeme</div>

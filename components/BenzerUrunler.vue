@@ -36,8 +36,8 @@
                 <span> {{ urun.fiyat }}TL</span>
               </div>
             </div>
-            <a href="#" class="mt-3 w-75 btn btn-outline-secondary rounded-btn"
-              ><f-icon icon="shopping-cart" /> Sepete Ekle</a
+            <a href="/sepet" class="mt-3 w-75 btn btn-outline-secondary rounded-btn"
+              ><img height="20" width="20 " src="../assets/SepetEkle.PNG" /> Sepete Ekle</a
             >
           </div>
         </div>

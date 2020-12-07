@@ -1,7 +1,7 @@
 <template>
   <div class="container">
    
-
+<Slide />
  <BodyMenu />
 
 
@@ -13,13 +13,13 @@
 
 
 import BodyMenu from '../components/BodyMenu.vue'
-
+import Slide from '../components/Slide.vue'
 
 
 
 export default {
   components: {
-
+    Slide,
     BodyMenu, 
     
  

@@ -52,6 +52,7 @@
                                     <a
                                       href="/"
                                       class="btn btn-danger btn-remove"
+                                      
                                       >Sil
                                     </a>
                                   </div>
@@ -159,4 +160,12 @@
   </section>
 </template>
 
+<script>
 
+export default {
+ 
+
+  
+}
+
+</script>

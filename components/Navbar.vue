@@ -83,9 +83,10 @@
                     role="button"
                   >
                     <img height="25" width="25" src="../assets/ShoppingCarticon.png" />
-                    <span class="count" data-cart-quantity="">1</span></a
+                    <span class="count" data-cart-quantity="">{{ totalBasketItemCount > 0 ? "("+totalBasketItemCount+")" : "" }}</span></a
                   >
                   <div class="dropdown-menu" aria-labelledby="console-menu-3">
+                    
                     <div class="products" data-cart-products="">
                       <div class="ajax-shopping-cart">
                         <div class="product" data-ajax-cart-product-id="4032">
@@ -119,7 +120,7 @@
                           <tfoot>
                             <tr>
                               <th>Ürünler Toplamı</th>
-                              <th>39,00 TL</th>
+                              <th>{{ total }} TL</th>
                             </tr>
                             <tr>
                               <th>Kargo</th>
@@ -130,7 +131,7 @@
                                 Genel Toplam <br />
                                 (KDV Dahil)
                               </th>
-                              <th><span class="final"> 54,00 TL </span></th>
+                              <th><span class="final"> TL </span></th>
                             </tr>
                           </tfoot>
                         </table>
@@ -159,4 +160,44 @@
   </section>
 </template>
 
+<script>
 
+export default {
+  data: () => {
+    return {
+
+    };
+  },
+  created() {
+
+  },
+  computed: {
+    basket(){
+      return this.$store.getters['basket/getBasketItems'];
+    },
+    totalBasketItemCount(){
+      let count = 0;
+      for (let i = 0; i< this.basket.length; i++) {
+        count += this.basket[i].count;
+      }
+      return count;
+    },
+    subtotal(){
+      let total = 0;
+      for (let i = 0; i < this.basket.length; i++) {
+        total += this.basket[i].product.price;
+      }
+      return total.toFixed(2);
+    },
+    total() {
+      let total = 0;
+      for (let i = 0; i < this.basket.length; i++) {
+        total += (this.basket[i].product.price * this.basket[i].count);
+      }
+      return total.toFixed(2);
+    }
+  },
+  methods: {
+  }
+}
+</script>

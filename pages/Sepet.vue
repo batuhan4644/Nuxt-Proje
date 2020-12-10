@@ -1,16 +1,234 @@
 
 <template>
-  <div class="container">
-    <CartProduct />
-  </div>
+  <section
+    class="pattern-group pattern-group-t-0 pattern-group-p-cart sticky-sidebar-992-2"
+    style="position: relative;"
+  >
+    <div class="container">
+      <div class="pattern-group-body">
+        <div class="row">
+          <div
+            class="col-list col-12 d-block col-sm-12 d-sm-block col-md-12 d-md-block col-lg-9 d-lg-block col-xl-9 d-xl-block p-g-b-c-0"
+          >
+            <div class="p-g-b-c-wrapper">
+              <div class="p-g-b-c-inner">
+                <div
+                  class="p-g-mod p-g-mod-t-31 p-g-mod-base-content  p-g-mod-trans   "
+                >
+                  <div class="p-g-mod-header  p-g-mod-header-p-0 ">
+                    <div class="p-g-m-h-info">
+                      <div class="p-g-m-h-i-title">
+                        Sepet Listesi
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-g-mod-body  p-g-mod-body-p-0  ">
+                    <div
+                      v-for="item in basket"
+                      :key="'basket' + item.id"
+                      class="product"
+                    >
+                      <div class="table-responsive">
+                        <table class="table table-hover">
+                          <thead>
+                            <tr>
+                              <th class="th-product">
+                                Ürün
+                              </th>
+                              <th class="th-price">
+                                Fiyat
+                              </th>
+                              <th class="th-quantity">
+                                Adet
+                              </th>
+                              <th class="th-total-price">
+                                Tutar
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr data-cart-product-id="4302">
+                              <td class="td-product">
+                           
+                                <div class="product">
+                                       <a
+                                  :href="'/urun-detay/' + item.product.id"
+                                  class="image"
+                                >
+                                  <img :src="item.product.image" alt="" />
+                                </a>
+                                <button
+                                      class="btn btn-danger btn-remove"
+                                      type="button"
+                                      @click="removeBasketItem(item.id)"
+                                    >
+                                      Sil
+                                    </button>
+                                <nuxt-link
+                                  :to="'/urun-detay/' + item.product.id"
+                                  class="name"
+                                >
+                                  {{ item.product.title }} (  )
+                                </nuxt-link>
+                                  <div class="image"></div>
+                                  <div class="p-info">
+                                    <div class="variants"></div>
+                                    
+                                  </div>
+                                </div>
+                              </td>
+                              <td class="td-price">
+                                <span class="value">
+                                  {{ item.product.price.toFixed(2) }} TL
+                                </span>
+                              </td>
+                              <td class="td-quantity">
+                                <div class="product-quantity">
+                                  <a
+                                    href="javascript:;"
+                                    class="btn btn-minus"
+                                    @click="decrease(item.id)"
+                                    ><img height="20" width="20 " src="../assets/Eksi.PNG" /></a
+                                  ><span>
+                                    <span> {{ item.count }} </span>
+                                    Adet </span
+                                  ><a
+                                    href="javascript:;"
+                                    class="btn btn-plus"
+                                    @click="increase(item.id)"
+                                    ><img height="20" width="20 " src="../assets/Artı.PNG" /></a>
+                                </div>
+                              </td>
+                              <td class="td-total-price">
+                                <span class="value">
+                                  {{
+                                    (item.product.price * item.count).toFixed(2)
+                                  }}
+                                  TL
+                                </span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="shopping-buttons-1">
+                      <a href="/" class="btn btn-light btn-continue"
+                        > Alışverişe Devam Et
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-list col-12 d-block col-sm-12 d-sm-block col-md-12 d-md-block col-lg-3 d-lg-block col-xl-3 d-xl-block p-g-b-c-1"
+          >
+            <div class="p-g-b-c-wrapper">
+              <div class="p-g-b-c-inner" style="position: relative;">
+                <div
+                  class="p-g-mod p-g-mod-t-37 p-g-mod-base-content  p-g-mod-trans   "
+                >
+                  <div class="p-g-mod-header  p-g-mod-header-p-0 ">
+                    <div class="p-g-m-h-info">
+                      <div class="p-g-m-h-i-title">
+                        Sipariş Özeti
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-g-mod-body  p-g-mod-body-p-0  ">
+                    <div class="payment-cart-summary-1">
+                      <table class="table summary">
+                        <tfoot>
+                          <tr>
+                            <th>Ürünler Toplamı</th>
+                            <th>{{ subtotal }}TL</th>
+                          </tr>
+                          <tr>
+                            <th>
+                              Genel Toplam <br />
+                              (KDV Dahil)
+                            </th>
+                            <th>
+                              <span class="final"> {{ total }} TL </span>
+                            </th>
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-g-mod p-g-mod-t-38   p-g-mod-trans   ">
+                  <div class="p-g-mod-body  p-g-mod-body-p-0  ">
+                    <div class="payment-final-buttons-1">
+                      <a
+                        href="https://www.toptanal.com/odeme?s=uk"
+                        class="btn btn-complete btn-theme-1"
+                      >
+                        Alışverişi Tamamla <img height="20" width="20 " src="../assets/Right1.PNG" /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
-import CartProduct from "../components/CartProduct";
 export default {
-    components:{
-        CartProduct,
+  data: () => {
+      return {
+
+    };
+  },
+  created() {},
+  computed: {
+    basket() {
+      return this.$store.getters["basket/getBasketItems"];
+    },
+    subtotal() {
+      let total = 0;
+      for (let i = 0; i < this.basket.length; i++) {
+        total += this.basket[i].product.price;
+      }
+      return total.toFixed(2);
+    },
+    total() {
+      let total = 0;
+      for (let i = 0; i < this.basket.length; i++) {
+        total += this.basket[i].product.price * this.basket[i].count;
+      }
+      return total.toFixed(2);
     }
-  
+  },
+  methods: {
+    removeBasketItem(id) {
+      this.$store.dispatch("basket/removeBasketItem", id);
+    },
+    increase(id) {
+      this.$store.dispatch("basket/increaseBasketItem", id);
+    },
+    decrease(id) {
+      this.$store.dispatch("basket/decreaseBasketItem", id);
+    }
+  }
 };
 </script>
+<style scoped>
+ .td-product  {
+    color: #333;
+    font-weight: 500;
+    font-size: 13px;
+    
+}
+a {
+    color: #333;
+    text-decoration: none;
+    background-color: transparent;
+}
+</style>

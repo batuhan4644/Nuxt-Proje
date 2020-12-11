@@ -2,9 +2,9 @@
   <section class="pattern-group pattern-group-t-0 pattern-group-p-product ">
     <div class="container">
       <div class="pattern-group-body">
-           
+
         <div class="row">
-            
+
           <div
             class="col-list col-12 d-block col-sm-12 d-sm-block col-md-12 d-md-block col-lg-12 d-lg-block col-xl-12 d-xl-block p-g-b-c-0"
           >
@@ -17,7 +17,7 @@
                     <div class="product-profile-1"  >
                       <div class="row">
                         <div class="col-lg-5">
-                            
+
                           <div
                             id="product-profile-carousel-3580"
                             class="carousel slide"
@@ -117,19 +117,19 @@
                               <a
                                 href="javascript:;"
                                 class="btn btn-minus"
-                               
+
                                 ><i @click="decsreaseCount()" class="fas fa-minus"></i></a
                               ><span
                                 class="form-control"
                                 name="quantity"
-                               
-                                
+
+
                               >
                               {{count}}
                               </span><a
                                 href="javascript:;"
                                 class="btn btn-plus"
-                               
+
                                 ><i @click="count++" class="fas fa-plus"></i
                               ></a>
                             </div>
@@ -141,7 +141,7 @@
                               Sepete Ekle</button
                             ><button
                               class="btn btn-fast-buy btn-color-2"
-                              
+
                             >
                               <i class="fas fa-lira-sign"></i>
                               Hemen Al</button
@@ -256,7 +256,7 @@ export default {
   data: () => {
     return {
       count: 1,
-     
+
     };
   },
   created() {
@@ -279,7 +279,6 @@ export default {
       const payload = {
         id: Math.random() * 1000,
         count: this.count,
-        color: this.color,
         product: this.product
       };
       this.$store.dispatch("basket/addBasket", payload);

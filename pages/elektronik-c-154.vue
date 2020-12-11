@@ -1024,7 +1024,7 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div
+                      <div v-for="(item, index) in products" :key="'product'+index"
                         class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-list-p-v-1"
                       >
                         <div class="card-product">
@@ -1038,15 +1038,14 @@
                                 <div class="image">
                                   <img
                                     class="lazy-load lazy-complete"
-                                    alt="Dearling RF-259 Profesyonel Saç Sakal Tıraş Makinesi"
-                                    src="../assets/ElektronikUrun.jpg"
+                                    :alt="item.title"
+                                    :src="item.image"
                                     style=""
                                   />
                                 </div>
                               </div>
                               <div class="title">
-                                Dearling RF-259 Profesyonel Saç Sakal Tıraş
-                                Makinesi
+                                {{ item.title }}
                               </div>
                               <div class="product-reviews">
                                 <img
@@ -1059,394 +1058,18 @@
                                 <div class="discount">%55</div>
                                 <div class="prices">
                                   <div class="list-price">290,00 TL</div>
-                                  <div class="sale-price">130,00 TL</div>
+                                  <div class="sale-price">{{ item.price.toFixed(2) }} TL</div>
                                 </div>
                               </div></a
                             >
                             <div class="buttons">
                               <a
                                 href="javascript:;"
-                                onclick="addCart(3617, 'card')"
-                                class="btn btn-cart btn-color-1 disabled"
+                                @click="addBasket(item)"
+                                class="btn btn-cart btn-color-1"
                                 ><img
                                   height="20"
                                   width="20 "
-                                  src="../assets/ShoppingCarticon.png"
-                                />
-                                Stokta Yok
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-list-p-v-1"
-                      >
-                        <div class="card-product">
-                          <div class="card-product-inner">
-                            <a
-                              href="/ElektronikUrun"
-                              class="c-p-i-link"
-                              title="Sony Xperia Z3 Z3 COMPACT Manyetik Dock Stand Şarj Ünitesi"
-                              ><div class="image-wrapper">
-                                <div class="image">
-                                  <img
-                                    class="lazy-load lazy-complete"
-                                    alt="Sony Xperia Z3 Z3 COMPACT Manyetik Dock Stand Şarj Ünitesi"
-                                    src="../assets/ElektronikUrun.jpg"
-                                    style=""
-                                  />
-                                </div>
-                              </div>
-                              <div class="title">
-                                Sony Xperia Z3 Z3 COMPACT Manyetik Dock Stand
-                                Şarj Ünitesi
-                              </div>
-                              <div class="product-reviews">
-                                <img
-                                  height="20"
-                                  width="60"
-                                  src="../assets/Yıldız.PNG"
-                                />
-                              </div>
-                              <div class="price-group">
-                                <div class="prices">
-                                  <div class="sale-price">63,00 TL</div>
-                                </div>
-                              </div></a
-                            >
-                            <div class="buttons">
-                              <a
-                                href="/sepet"
-                                onclick="addCart(3614, 'card')"
-                                class="btn btn-cart btn-color-1"
-                                ><img
-                                  height="20"
-                                  width="20"
-                                  src="../assets/ShoppingCarticon.png"
-                                />
-                                Sepete Ekle
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-list-p-v-1"
-                      >
-                        <div class="card-product">
-                          <div class="card-product-inner">
-                            <a
-                              href="/ElektronikUrun"
-                              class="c-p-i-link"
-                              title="Çiçekli Tulumlu Peluş Ayıcık 80 Cm Siyah"
-                              ><div class="free-cargo-badge">KARGO BEDAVA</div>
-                              <div class="image-wrapper">
-                                <div class="image">
-                                  <img
-                                    class="lazy-load lazy-complete"
-                                    alt="Çiçekli Tulumlu Peluş Ayıcık 80 Cm Siyah"
-                                    src="../assets/ElektronikUrun.jpg"
-                                    style=""
-                                  />
-                                </div>
-                              </div>
-                              <div class="title">
-                                Çiçekli Tulumlu Peluş Ayıcık 80 Cm Siyah
-                              </div>
-                              <div class="product-reviews">
-                                <img
-                                  height="20"
-                                  width="60"
-                                  src="../assets/Yıldız.PNG"
-                                />
-                              </div>
-                              <div class="price-group">
-                                <div class="discount">%26</div>
-                                <div class="prices">
-                                  <div class="list-price">155,00 TL</div>
-                                  <div class="sale-price">115,00 TL</div>
-                                </div>
-                              </div></a
-                            >
-                            <div class="buttons">
-                              <a
-                                href="/sepet"
-                                onclick="addCart(3593, 'card')"
-                                class="btn btn-cart btn-color-1"
-                                ><img
-                                  height="20"
-                                  width="20"
-                                  src="../assets/ShoppingCarticon.png"
-                                />
-                                Sepete Ekle
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-list-p-v-1"
-                      >
-                        <div class="card-product">
-                          <div class="card-product-inner">
-                            <a
-                              href="/ElektronikUrun"
-                              class="c-p-i-link"
-                              title="Dohoning Mutfak Tartısı 5 Kg Acs-b5 PENG.0136"
-                              ><div class="image-wrapper">
-                                <div class="image">
-                                  <img
-                                    class="lazy-load lazy-complete"
-                                    alt="Dohoning Mutfak Tartısı 5 Kg Acs-b5 PENG.0136"
-                                    src="../assets/ElektronikUrun.jpg"
-                                    style=""
-                                  />
-                                </div>
-                              </div>
-                              <div class="title">
-                                Dohoning Mutfak Tartısı 5 Kg Acs-b5 PENG.0136
-                              </div>
-                              <div class="product-reviews">
-                                <img
-                                  height="20"
-                                  width="60"
-                                  src="../assets/Yıldız.PNG"
-                                />
-                              </div>
-                              <div class="price-group">
-                                <div class="discount">%17</div>
-                                <div class="prices">
-                                  <div class="list-price">119,00 TL</div>
-                                  <div class="sale-price">99,00 TL</div>
-                                </div>
-                              </div></a
-                            >
-                            <div class="buttons">
-                              <a
-                                href="/sepet"
-                                onclick="addCart(3587, 'card')"
-                                class="btn btn-cart btn-color-1"
-                                ><img
-                                  height="20"
-                                  width="20"
-                                  src="../assets/ShoppingCarticon.png"
-                                />
-                                Sepete Ekle
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-list-p-v-1"
-                      >
-                        <div class="card-product">
-                          <div class="card-product-inner">
-                            <a
-                              href="/ElektronikUrun"
-                              class="c-p-i-link"
-                              title="Xiaomi Mi Wifi Pro Sinyal Yakınlaştırıcı - Güçlendirici 300 Mbps"
-                              ><div class="free-cargo-badge">KARGO BEDAVA</div>
-                              <div class="image-wrapper">
-                                <div class="image">
-                                  <img
-                                    class="lazy-load lazy-complete"
-                                    alt="Xiaomi Mi Wifi Pro Sinyal Yakınlaştırıcı - Güçlendirici 300 Mbps"
-                                    src="../assets/ElektronikUrun.jpg"
-                                    style=""
-                                  />
-                                </div>
-                              </div>
-                              <div class="title">
-                                Xiaomi Mi Wifi Pro Sinyal Yakınlaştırıcı -
-                                Güçlendirici 300 Mbps
-                              </div>
-                              <div class="product-reviews">
-                                <img
-                                  height="20"
-                                  width="60"
-                                  src="../assets/Yıldız.PNG"
-                                />
-                              </div>
-                              <div class="price-group">
-                                <div class="prices">
-                                  <div class="sale-price">140,00 TL</div>
-                                </div>
-                              </div></a
-                            >
-                            <div class="buttons">
-                              <a
-                                href="/sepet"
-                                onclick="addCart(3580, 'card')"
-                                class="btn btn-cart btn-color-1"
-                                ><img
-                                  height="20"
-                                  width="20"
-                                  src="../assets/ShoppingCarticon.png"
-                                />
-                                Sepete Ekle
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-list-p-v-1"
-                      >
-                        <div class="card-product">
-                          <div class="card-product-inner">
-                            <a
-                              href="/ElektronikUrun"
-                              class="c-p-i-link"
-                              title="Mi Band 4 Bilezik Bileklik Akıllı spor bilezik Bileklik Su Geçirmez Darı 4 Yarı Saydam Kayış 6 renk"
-                              ><div class="image-wrapper">
-                                <div class="image">
-                                  <img
-                                    class="lazy-load lazy-complete"
-                                    alt="Mi Band 4 Bilezik Bileklik Akıllı spor bilezik Bileklik Su Geçirmez Darı 4 Yarı Saydam Kayış 6 renk"
-                                    src="../assets/ElektronikUrun.jpg"
-                                    style=""
-                                  />
-                                </div>
-                              </div>
-                              <div class="title">
-                                Mi Band 4 Bilezik Bileklik Akıllı spor bilezik
-                                Bileklik Su Geçirmez Darı 4 Yarı Saydam Kayış 6
-                                renk
-                              </div>
-                              <div class="product-reviews">
-                                <img
-                                  height="20"
-                                  width="60"
-                                  src="../assets/Yıldız.PNG"
-                                />
-                              </div>
-                              <div class="price-group">
-                                <div class="discount">%40</div>
-                                <div class="prices">
-                                  <div class="list-price">25,00 TL</div>
-                                  <div class="sale-price">15,00 TL</div>
-                                </div>
-                              </div></a
-                            >
-                            <div class="buttons">
-                              <a
-                                href="/sepet"
-                                onclick="addCart(3579, 'card')"
-                                class="btn btn-cart btn-color-1"
-                                ><img
-                                  height="20"
-                                  width="20"
-                                  src="../assets/ShoppingCarticon.png"
-                                />
-                                Sepete Ekle
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-list-p-v-1"
-                      >
-                        <div class="card-product">
-                          <div class="card-product-inner">
-                            <a
-                              href="/ElektronikUrun"
-                              class="c-p-i-link"
-                              title="Orijinal Xiaomi Mi TV stick Android TV 9.0 Dört çekirdekli 4K HDR"
-                              ><div class="free-cargo-badge">KARGO BEDAVA</div>
-                              <div class="image-wrapper">
-                                <div class="image">
-                                  <img
-                                    class="lazy-load lazy-complete"
-                                    alt="Orijinal Xiaomi Mi TV stick Android TV 9.0 Dört çekirdekli 4K HDR"
-                                    src="../assets/ElektronikUrun.jpg"
-                                    style=""
-                                  />
-                                </div>
-                              </div>
-                              <div class="title">
-                                Orijinal Xiaomi Mi TV stick Android TV 9.0 Dört
-                                çekirdekli 4K HDR
-                              </div>
-                              <div class="product-reviews">
-                                <img
-                                  height="20"
-                                  width="60"
-                                  src="../assets/Yıldız.PNG"
-                                />
-                              </div>
-                              <div class="price-group">
-                                <div class="discount">%38</div>
-                                <div class="prices">
-                                  <div class="list-price">600,00 TL</div>
-                                  <div class="sale-price">370,00 TL</div>
-                                </div>
-                              </div></a
-                            >
-                            <div class="buttons">
-                              <a
-                                href="/sepet"
-                                onclick="addCart(3578, 'card')"
-                                class="btn btn-cart btn-color-1"
-                                ><img
-                                  height="20"
-                                  width="20"
-                                  src="../assets/ShoppingCarticon.png"
-                                />
-                                Sepete Ekle
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-list-p-v-1"
-                      >
-                        <div class="card-product">
-                          <div class="card-product-inner">
-                            <a
-                              href="/ElektronikUrun"
-                              class="c-p-i-link"
-                              title="Egonex TR-650 Profesyonel Saç Sakal Tıraş Makinesi"
-                              ><div class="image-wrapper">
-                                <div class="image">
-                                  <img
-                                    class="lazy-load lazy-complete"
-                                    alt="Egonex TR-650 Profesyonel Saç Sakal Tıraş Makinesi"
-                                    src="../assets/ElektronikUrun.jpg"
-                                    style=""
-                                  />
-                                </div>
-                              </div>
-                              <div class="title">
-                                Egonex TR-650 Profesyonel Saç Sakal Tıraş
-                                Makinesi
-                              </div>
-                              <div class="product-reviews">
-                                <img
-                                  height="20"
-                                  width="60"
-                                  src="../assets/Yıldız.PNG"
-                                />
-                              </div>
-                              <div class="price-group">
-                                <div class="discount">%23</div>
-                                <div class="prices">
-                                  <div class="list-price">129,00 TL</div>
-                                  <div class="sale-price">99,00 TL</div>
-                                </div>
-                              </div></a
-                            >
-                            <div class="buttons">
-                              <a
-                                href="/sepet"
-                                onclick="addCart(3576, 'card')"
-                                class="btn btn-cart btn-color-1"
-                                ><img
-                                  height="20"
-                                  width="20"
                                   src="../assets/ShoppingCarticon.png"
                                 />
                                 Sepete Ekle
@@ -1459,20 +1082,11 @@
                     <div class="pagination-wrapper">
                       <nav class="pagination-nav">
                         <ul class="pagination">
-                          <li class="page-item active">
+                          <li class="page-item" :class="page === 0 ? 'active' : ''" @click="page = 0">
                             <a class="page-link" href="javascript:;">1</a>
                           </li>
-                          <li class="page-item">
-                            <a class="page-link" href="/elektronik-c-154">2</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="/elektronik-c-154">3</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="javascript:;">...</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="/elektronik-c-154">14</a>
+                          <li class="page-item" :class="page === 1 ? 'active' : ''"  @click="page = 1">
+                            <a class="page-link" href="javascript:;">2</a>
                           </li>
                         </ul>
                       </nav>
@@ -1495,6 +1109,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 export default {
   data() {
     return {
+      page: 0,
       filtreler: [
         "En Yeniler",
         "En Çok Satanlar",
@@ -1507,12 +1122,24 @@ export default {
       secili: 2,
     };
   },
-
+  computed: {
+    products(){
+      const page = this.page * 8;
+      return this.$store.getters["product/getProducts"].slice(page, page + 8);
+    }
+  },
   methods: {
     sec(id) {
-      console.log("tıklandı");
       this.secili = id;
     },
+    addBasket(item){
+      const payload = {
+        id: Math.random() * 1000,
+        count: 1,
+        product: item
+      };
+      this.$store.dispatch("basket/addBasket", payload);
+    }
   },
 };
 </script>
@@ -1548,12 +1175,12 @@ export default {
     -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
 }
-    
-.mega-menu .dropdown:hover .dropdown-menu, 
+
+.mega-menu .dropdown:hover .dropdown-menu,
  .mega-menu .dropdown .dropdown-menu:hover {
     display:block!important;
  }
- 
+
 
 
 </style>

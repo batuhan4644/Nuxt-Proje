@@ -26,7 +26,7 @@
                     <div
                       v-for="item in basket"
                       :key="'basket' + item.id"
-                      class="product"
+                      class="shopping-cart-1"
                     >
                       <div class="table-responsive">
                         <table class="table table-hover">
@@ -49,31 +49,20 @@
                           <tbody>
                             <tr data-cart-product-id="4302">
                               <td class="td-product">
-                           
                                 <div class="product">
-                                       <a
-                                  :href="'/urun-detay/' + item.product.id"
-                                  class="image"
-                                >
-                                  <img :src="item.product.image" alt="" />
-                                </a>
-                                <button
-                                      class="btn btn-danger btn-remove"
-                                      type="button"
-                                      @click="removeBasketItem(item.id)"
-                                    >
+                                  <div class="image">
+                                    <nuxt-link :to="'/urun-detay/' + item.product.id">
+                                      <img class="lazy-load lazy-complete basket-image" alt="" :src="item.product.image" style="">
+                                    </nuxt-link>
+                                  </div>
+                                  <div class="p-info">
+                                    <a href="https://www.toptanal.com/150-cek-birak-is-makinesi-oyun-seti-urun3602.html" class="name">
+                                      {{ item.product.title }}
+                                    </a>
+                                    <div class="variants"></div>
+                                    <button @click="removeBasketItem(item.id)" class="btn btn-danger btn-remove" type="button">
                                       Sil
                                     </button>
-                                <nuxt-link
-                                  :to="'/urun-detay/' + item.product.id"
-                                  class="name"
-                                >
-                                  {{ item.product.title }} (  )
-                                </nuxt-link>
-                                  <div class="image"></div>
-                                  <div class="p-info">
-                                    <div class="variants"></div>
-                                    
                                   </div>
                                 </div>
                               </td>
@@ -84,19 +73,13 @@
                               </td>
                               <td class="td-quantity">
                                 <div class="product-quantity">
-                                  <a
-                                    href="javascript:;"
-                                    class="btn btn-minus"
-                                    @click="decrease(item.id)"
-                                    ><img height="20" width="20 " src="../assets/Eksi.PNG" /></a
-                                  ><span>
-                                    <span> {{ item.count }} </span>
-                                    Adet </span
-                                  ><a
-                                    href="javascript:;"
-                                    class="btn btn-plus"
-                                    @click="increase(item.id)"
-                                    ><img height="20" width="20 " src="../assets/Artı.PNG" /></a>
+                                  <a href="javascript:;" style="font-size: 23px;" class="btn btn-minus" @click="decrease(item.id)">
+                                    -
+                                  </a>
+                                  <input class="form-control" data-base-value="1" name="quantity" min="1" max="9999" maxlength="4" :value="item.count" >
+                                  <a href="javascript:;" style="font-size: 20px;"  class="btn btn-plus" @click="increase(item.id)">
+                                    +
+                                  </a>
                                 </div>
                               </td>
                               <td class="td-total-price">
@@ -224,11 +207,46 @@ export default {
     color: #333;
     font-weight: 500;
     font-size: 13px;
-    
+
 }
 a {
     color: #333;
     text-decoration: none;
     background-color: transparent;
 }
+ .shopping-cart-1 .td-product .product {
+   display: flex;
+ }
+ @media (max-width: 767px)
+ .shopping-cart-1 .table tr .td-product {
+   width: 100%;
+   float: left;
+ }
+ @media (max-width: 767px)
+ .shopping-cart-1 .table tr td {
+   display: block;
+   width: 100%;
+   border: none;
+ }
+ .shopping-cart-1 .td-product {
+   font-size: 13px;
+   font-weight: 500;
+ }
+ .shopping-cart-1 td {
+   padding: 5px 5px;
+ }
+ .table td, .table th {
+   padding: .75rem;
+   vertical-align: top;
+   border-top: 1px solid #dee2e6;
+ }
+ .shopping-cart-1 .td-product .product .image {
+   margin-right: 5px;
+ }
+ .shopping-cart-1 .td-product .product .image a {
+   display: block;
+ }
+ .shopping-cart-1 .td-product .product .image img {
+   max-width: 100px;
+ }
 </style>

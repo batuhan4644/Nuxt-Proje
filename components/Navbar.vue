@@ -28,7 +28,7 @@
                   </div>
                   <button type="submit" class="btn btn-orange btn-send">
                     <img btn height="30" width="30" src="../assets/Search.PNG" href="/" />
-                  
+
                   </button>
                 </form>
                 <div
@@ -51,7 +51,7 @@
                     href="javascript:;"
                     id="console-menu-2"
                     role="button"
-                    
+
                     ><img height="25" width="25" src="../assets/fa1.png" /><span>Hesabım</span></a
                   >
                   <div class="dropdown-menu" aria-labelledby="console-menu-2">
@@ -86,7 +86,7 @@
                     <span class="count" data-cart-quantity="">{{ totalBasketItemCount > 0 ? "("+totalBasketItemCount+")" : "" }}</span></a
                   >
                   <div class="dropdown-menu" aria-labelledby="console-menu-3">
-                    
+
                     <div class="products" data-cart-products="">
                       <div class="ajax-shopping-cart">
                         <div class="product" data-ajax-cart-product-id="4032">
@@ -131,7 +131,7 @@
                                 Genel Toplam <br />
                                 (KDV Dahil)
                               </th>
-                              <th><span class="final"> TL </span></th>
+                              <th><span class="final">{{ (parseFloat(total) + 15).toFixed(2) }} TL </span></th>
                             </tr>
                           </tfoot>
                         </table>

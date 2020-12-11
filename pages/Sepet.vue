@@ -56,9 +56,9 @@
                                     </nuxt-link>
                                   </div>
                                   <div class="p-info">
-                                    <a href="https://www.toptanal.com/150-cek-birak-is-makinesi-oyun-seti-urun3602.html" class="name">
+                                    <nuxt-link  :to="'/urun-detay/' + item.product.id" class="name">
                                       {{ item.product.title }}
-                                    </a>
+                                    </nuxt-link>
                                     <div class="variants"></div>
                                     <button @click="removeBasketItem(item.id)" class="btn btn-danger btn-remove" type="button">
                                       Sil
@@ -217,17 +217,7 @@ a {
  .shopping-cart-1 .td-product .product {
    display: flex;
  }
- @media (max-width: 767px)
- .shopping-cart-1 .table tr .td-product {
-   width: 100%;
-   float: left;
- }
- @media (max-width: 767px)
- .shopping-cart-1 .table tr td {
-   display: block;
-   width: 100%;
-   border: none;
- }
+
  .shopping-cart-1 .td-product {
    font-size: 13px;
    font-weight: 500;

@@ -99,7 +99,9 @@
                                 alt=""
                             /></a>
                           </div>
+                          
                           <div class="info">
+                            
                             <a
                               href="/sepet"
                               class="name"

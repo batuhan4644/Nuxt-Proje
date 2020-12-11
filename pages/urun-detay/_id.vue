@@ -47,7 +47,7 @@
                               >
                                 <img
                                   class="d-block w-100"
-                                  src="https://www.toptanal.com/cdn/2/100/100/images/urunler/5fc11cac4929c-49962.jpg"
+                                  :src="product.image"
                                   alt="Xiaomi Mi Wifi Pro Sinyal Yakınlaştırıcı - Güçlendirici 300 Mbps"
                                 />
                               </li>
@@ -139,19 +139,20 @@
                             >
                               <i class="fas fa-cart-plus"></i>
                               Sepete Ekle</button
-                            ><button
+                            ><nuxt-link
                               class="btn btn-fast-buy btn-color-2"
-
+                           :to="'/Sepet'" 
+ 
                             >
-                              <i class="fas fa-lira-sign"></i>
-                              Hemen Al</button
-                            ><a
-                              href="https://api.whatsapp.com/send?phone=9005544711414&amp;text=https://www.toptanal.com/xiaomi-mi-wifi-pro-sinyal-yakinlastirici-guclendirici-300-mbps-urun3580.html"
+                              <nuxt-link  :to="'/Sepet'" class="fas fa-lira-sign"></nuxt-link>
+                              Hemen Al</nuxt-link
+                            ><nuxt-link
+                               :to="'/' "
                               class="btn btn-wp"
                               target="_blank"
                               ><i class="fab fa-whatsapp"></i>
                               WHATSAPP İLE SİPARİŞ VER
-                            </a>
+                            </nuxt-link>
                           </div>
                           <div
                             class="product-favourite"

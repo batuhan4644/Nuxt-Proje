@@ -1029,8 +1029,8 @@
                       >
                         <div class="card-product">
                           <div class="card-product-inner">
-                            <a
-                              href="/ElektronikUrun"
+                            <nuxt-link
+                              :to="'/urun-detay/' + item.id"
                               class="c-p-i-link"
                               title="Dearling RF-259 Profesyonel Saç Sakal Tıraş Makinesi"
                               ><div class="free-cargo-badge">KARGO BEDAVA</div>
@@ -1060,7 +1060,7 @@
                                   <div class="list-price">290,00 TL</div>
                                   <div class="sale-price">{{ item.price.toFixed(2) }} TL</div>
                                 </div>
-                              </div></a
+                              </div></nuxt-link
                             >
                             <div class="buttons">
                               <a

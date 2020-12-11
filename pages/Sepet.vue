@@ -146,7 +146,7 @@
                   <div class="p-g-mod-body  p-g-mod-body-p-0  ">
                     <div class="payment-final-buttons-1">
                       <a
-                        href="https://www.toptanal.com/odeme?s=uk"
+                        href="/uye-giris"
                         class="btn btn-complete btn-theme-1"
                       >
                         Alışverişi Tamamla <img height="20" width="20 " src="../assets/Right1.PNG" /></a>

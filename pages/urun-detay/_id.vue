@@ -63,16 +63,15 @@
                               <div class="product-reviews">
                                 <div class="stars">
                                   <span class="star "
-                                    ><i class="fa fa-star"></i></span
+                                    >♡<i class= ""></i></span
                                   ><span class="star "
-                                    ><i class="fa fa-star"></i></span
+                                    >♡<i class=""></i></span
                                   ><span class="star "
-                                    ><i class="fa fa-star"></i></span
+                                    >♡<i class=""></i></span
                                   ><span class="star "
-                                    ><i class="fa fa-star"></i></span
+                                    >♡<i class=""></i></span
                                   ><span class="star "
-                                    ><i class="fa fa-star"></i
-                                  ></span>
+                                    >♡</span>
                                 </div>
                               </div>
                             </li>
@@ -118,7 +117,7 @@
                                 href="javascript:;"
                                 class="btn btn-minus"
 
-                                ><i @click="decsreaseCount()" class="fas fa-minus"></i></a
+                                ><i @click="decsreaseCount()" class=""><img src="https://img.icons8.com/android/24/000000/minus.png"/></i></a
                               ><span
                                 class="form-control"
                                 name="quantity"
@@ -130,27 +129,28 @@
                                 href="javascript:;"
                                 class="btn btn-plus"
 
-                                ><i @click="count++" class="fas fa-plus"></i
+                                ><i @click="count++" class=""><img src="https://img.icons8.com/android/24/000000/plus.png"/></i
                               ></a>
                             </div>
                             <button
                               class="btn btn-cart btn-color-1"
                               @click="addBasket"
                             >
-                              <i class="fas fa-cart-plus"></i>
+                              <img src="https://img.icons8.com/ios-filled/30/000000/add-shopping-cart.png"/>
                               Sepete Ekle</button
                             ><nuxt-link
                               class="btn btn-fast-buy btn-color-2"
                            :to="'/Sepet'" 
  
                             >
-                              <nuxt-link  :to="'/Sepet'" class="fas fa-lira-sign"></nuxt-link>
+                              <nuxt-link  :to="'/Sepet'"  class=""><img src="https://img.icons8.com/material-sharp/24/000000/turkish-lira.png"/>
+                              </nuxt-link>
                               Hemen Al</nuxt-link
                             ><nuxt-link
                                :to="'/' "
                               class="btn btn-wp"
                               target="_blank"
-                              ><i class="fab fa-whatsapp"></i>
+                              ><img src="https://img.icons8.com/fluent/18/000000/whatsapp.png"/>
                               WHATSAPP İLE SİPARİŞ VER
                             </nuxt-link>
                           </div>
@@ -162,7 +162,7 @@
                               href="javascript:;"
                               class="d-block add-favorite"
                               onclick="userProductFavourite('add', 3580)"
-                              ><i class="far fa-heart"></i>
+                              >♡<i class=""></i>
                               Favorilerime ekle </a
                             ><a
                               href="javascript:;"
@@ -174,16 +174,13 @@
                           </div>
                           <div class="product-badges">
                             <div class="p-badge shipping-fast">
-                              <i class="fas fa-shipping-fast"></i
-                              ><span>Hızlı Gönderi</span>
+                              <img src="https://img.icons8.com/metro/26/000000/in-transit.png"/><span>Hızlı Gönderi</span>
                             </div>
                             <div class="p-badge door-payment">
-                              <i class="fas fa-shield-alt"></i
-                              ><span>Güvenli Alışveriş</span>
+                              <img src="https://img.icons8.com/metro/26/000000/shield.png"/><span>Güvenli Alışveriş</span>
                             </div>
                             <div class="p-badge credit-card">
-                              <i class="fas fa-retweet"></i
-                              ><span>İade ve Değişim</span>
+                              <img src="https://img.icons8.com/fluent-systems-filled/24/000000/retweet.png"/><span>İade ve Değişim</span>
                             </div>
                           </div>
                           <div class="social-share jssocials">
@@ -193,48 +190,36 @@
                               >
                                 <a
                                   target="_blank"
-                                  href="https://twitter.com/share?url=https%3A%2F%2Fwww.toptanal.com%2Fxiaomi-mi-wifi-pro-sinyal-yakinlastirici-guclendirici-300-mbps-urun3580.html&amp;text=Xiaomi%20Mi%20Wifi%20Pro%20Sinyal%20Yak%C4%B1nla%C5%9Ft%C4%B1r%C4%B1c%C4%B1%20-%20G%C3%BC%C3%A7lendirici%20300%20Mbps"
+                                  href="/"
                                   class="jssocials-share-link"
-                                  ><i
-                                    class="fab fa-twitter jssocials-share-logo"
-                                  ></i
-                                ></a>
+                                  ><img src="https://img.icons8.com/fluent/18/000000/twitter.png"/></a>
                               </div>
                               <div
                                 class="jssocials-share jssocials-share-facebook"
                               >
                                 <a
                                   target="_blank"
-                                  href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.toptanal.com%2Fxiaomi-mi-wifi-pro-sinyal-yakinlastirici-guclendirici-300-mbps-urun3580.html"
+                                  href="/"
                                   class="jssocials-share-link"
-                                  ><i
-                                    class="fab fa-facebook-f jssocials-share-logo"
-                                  ></i
-                                ></a>
+                                  ><img src="https://img.icons8.com/fluent/18/000000/facebook-new.png"/></a>
                               </div>
                               <div
                                 class="jssocials-share jssocials-share-linkedin"
                               >
                                 <a
                                   target="_blank"
-                                  href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.toptanal.com%2Fxiaomi-mi-wifi-pro-sinyal-yakinlastirici-guclendirici-300-mbps-urun3580.html"
+                                  href="/"
                                   class="jssocials-share-link"
-                                  ><i
-                                    class="fab fa-linkedin jssocials-share-logo"
-                                  ></i
-                                ></a>
+                                  ><img src="https://img.icons8.com/fluent/18/000000/linkedin.png"/></a>
                               </div>
                               <div
                                 class="jssocials-share jssocials-share-whatsapp"
                               >
                                 <a
                                   target="_self"
-                                  href="whatsapp://send?text=https%3A%2F%2Fwww.toptanal.com%2Fxiaomi-mi-wifi-pro-sinyal-yakinlastirici-guclendirici-300-mbps-urun3580.html Xiaomi%20Mi%20Wifi%20Pro%20Sinyal%20Yak%C4%B1nla%C5%9Ft%C4%B1r%C4%B1c%C4%B1%20-%20G%C3%BC%C3%A7lendirici%20300%20Mbps"
+                                  href="/"
                                   class="jssocials-share-link"
-                                  ><i
-                                    class="fab fa-whatsapp jssocials-share-logo"
-                                  ></i
-                                ></a>
+                                  ><img src="https://img.icons8.com/fluent/18/000000/whatsapp.png"/></a>
                               </div>
                             </div>
                           </div>
@@ -249,7 +234,9 @@
         </div>
       </div>
     </div>
+     <BenzerUrunler />
   </section>
+ 
 </template>
 <script>
 export default {

@@ -89,16 +89,12 @@
 
                     <div class="products" data-cart-products="">
                       <div class="ajax-shopping-cart">
-                        <div class="product" data-ajax-cart-product-id="4032">
-                          <div class="image">
-                            <a
-                              href="/sepetimage"
-                              ><img
-                                class=""
-                                src="../assets/sepeturunkucuk1.jpg"
-                                alt=""
-                            /></a>
-                          </div>
+                        <div class="product" data-ajax-cart-product-id="4032" v-for="item in basket"
+                      :key="'basket' + item.id"
+                     >
+                          <nuxt-link :to="'/urun-detay/' + item.product.id">
+                                      <img class="lazy-load lazy-complete basket-image" alt="" :src="item.product.image" style="">
+                                    </nuxt-link>
                           
                           <div class="info">
                             
@@ -106,11 +102,13 @@
                               href="/sepet"
                               class="name"
                             >
-                              Renkli Ahşap Denge Oyunu
+                                <nuxt-link  :to="'/urun-detay/' + item.product.id" class="name">
+                                      {{ item.product.title }}
+                                    </nuxt-link>
                             </a>
                             <div class="variants"></div>
                             <div class="price">
-                              <span class="value"> 39,00 TL X 1 Adet </span>
+                              <span class="value"> {{ item.product.price.toFixed(2) }} X {{ item.count }} </span>
                             </div>
                           </div>
                         </div>
@@ -203,3 +201,9 @@ export default {
   }
 }
 </script>
+<style scoped>
+.basket-image
+{
+  width: 50px;
+}
+</style>

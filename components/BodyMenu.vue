@@ -32,8 +32,8 @@
                         <div
                           class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-list-p-v-1"
                         >
-                          <a
-                            href="/Tıras"
+                          <nuxt-link
+                            :to="'/urun-detay/2'"
                             class="banner-item"
                             ><div class="image">
                               <img
@@ -42,13 +42,13 @@
                                 src="../assets/Body/Body2.png"
                                 style=""
                               /></div
-                          ></a>
+                          ></nuxt-link>
                         </div>
                         <div
                           class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-list-p-v-1"
                         >
-                          <a
-                            href="/Tıras"
+                           <nuxt-link
+                            :to="'/urun-detay/3'"
                             class="banner-item"
                             ><div class="image">
                               <img
@@ -57,13 +57,13 @@
                                 src="../assets/Body/Body3.png"
                                 style=""
                               /></div
-                          ></a>
+                          ></nuxt-link>
                         </div>
                         <div
                           class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-list-p-v-1"
                         >
-                          <a
-                            href="/Tıras"
+                           <nuxt-link
+                            :to="'/urun-detay/4'"
                             class="banner-item"
                             ><div class="image">
                               <img
@@ -72,13 +72,13 @@
                                 src="../assets/Body/Body4.png"
                                 style=""
                               /></div
-                          ></a>
+                          ></nuxt-link>
                         </div>
                         <div
                           class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-list-p-v-1"
                         >
-                          <a
-                            href="/Tıras"
+                          <nuxt-link
+                            :to="'/urun-detay/5'"
                             class="banner-item"
                             ><div class="image">
                               <img
@@ -87,13 +87,13 @@
                                 src="../assets/Body/Body5.png"
                                 style=""
                               /></div
-                          ></a>
+                          ></nuxt-link>
                         </div>
                         <div
                           class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-list-p-v-1"
                         >
-                          <a
-                            href="/Tıras"
+                           <nuxt-link
+                            :to="'/urun-detay/6'"
                             class="banner-item"
                             ><div class="image">
                               <img
@@ -102,7 +102,7 @@
                                 src="../assets/Body/Body6.png"
                                 style=""
                               /></div
-                          ></a>
+                          ></nuxt-link>
                         </div>
                       </div>
                     </div>

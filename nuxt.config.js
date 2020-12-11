@@ -9,12 +9,15 @@ export default {
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-          {
-            rel: 'stylesheet',
-            href: 'http://www.toptanal.com/template/smart/default/assets/plugins/fontawesome/css/all.min.css',
-            crossorigin: 'anonymous'
-          }
-        ]
+            {
+                rel: 'stylesheet',
+                href: 'http://www.toptanal.com/template/smart/default/assets/plugins/fontawesome/css/all.min.css',
+                crossorigin: 'anonymous'
+
+            }
+        ],
+
+
     },
 
     // Global CSS (https://go.nuxtjs.dev/config-css)

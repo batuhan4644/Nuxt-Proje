@@ -23,11 +23,11 @@
 </template>
 
 <script>
-import WhatsappDestek from "../assets/WhatsappDestek.png";
-import GuvenliAlısveris from "../assets/GuvenliAlısveris.png";
-import KolayIade from "../assets/KolayIade.png";
-import AltiAyTaksit from "../assets/AltiAyTaksit.png";
-import HizliKargo from "../assets/HizliKargo.png";
+import WhatsappDestek from "../assets/icons/WhatsappDestek.png";
+import GuvenliAlısveris from "../assets/icons/GuvenliAlısveris.png";
+import KolayIade from "../assets/icons/KolayIade.png";
+import AltiAyTaksit from "../assets/icons/AltiAyTaksit.png";
+import HizliKargo from "../assets/icons/HizliKargo.png";
 export default {
   data() {
     return {

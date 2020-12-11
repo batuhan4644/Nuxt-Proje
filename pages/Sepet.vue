@@ -149,7 +149,7 @@
                         href="/uye-giris"
                         class="btn btn-complete btn-theme-1"
                       >
-                        Alışverişi Tamamla <img height="20" width="20 " src="../assets/Right1.PNG" /></a>
+                        Alışverişi Tamamla <img height="20" width="20 " src="../assets/icons/Right1.PNG" /></a>
                     </div>
                   </div>
                 </div>

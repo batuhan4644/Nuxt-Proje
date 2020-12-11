@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-md-3">
           <div class="logo header-area">
-            <a href="/"><img src="../assets/toptanalogo.png" alt="" /></a>
+            <a href="/"><img src="../assets/icons/toptanalogo.png" alt="" /></a>
           </div>
         </div>
         <div class="col-md-6">
@@ -27,7 +27,7 @@
                     />
                   </div>
                   <button type="submit" class="btn btn-orange btn-send">
-                    <img btn height="30" width="30" src="../assets/Search.PNG" href="/" />
+                    <img btn height="30" width="30" src="../assets/icons/Search.PNG" href="/" />
 
                   </button>
                 </form>
@@ -52,24 +52,24 @@
                     id="console-menu-2"
                     role="button"
 
-                    ><img height="25" width="25" src="../assets/fa1.png" /><span>Hesabım</span></a
+                    ><img height="25" width="25" src="../assets/icons/fa1.png" /><span>Hesabım</span></a
                   >
                   <div class="dropdown-menu" aria-labelledby="console-menu-2">
                     <ul class="auth-links">
                       <li>
                         <a href="/uye-giris">
-                          <img height="15" width="15" src="../assets/a.PNG" />
+                          <img height="15" width="15" src="../assets/icons/a.PNG" />
                           Giriş Yap</a
                         >
                       </li>
                       <li>
                         <a href="/uye-ol"
-                          >  <img height="15" width="15" src="../assets/b.PNG" />Üye Ol</a
+                          >  <img height="15" width="15" src="../assets/icons/b.PNG" />Üye Ol</a
                         >
                       </li>
                       <li>
                         <a href="/uye-girissayfasifre"
-                          ><img height="15" width="15" src="../assets/c.PNG" /> Şifremi Unuttum</a
+                          ><img height="15" width="15" src="../assets/icons/c.PNG" /> Şifremi Unuttum</a
                         >
                       </li>
                     </ul>
@@ -82,7 +82,7 @@
                     id="console-menu-3"
                     role="button"
                   >
-                    <img height="25" width="25" src="../assets/ShoppingCarticon.png" />
+                    <img height="25" width="25" src="../assets/icons/ShoppingCarticon.png" />
                     <span class="count" data-cart-quantity="">{{ totalBasketItemCount > 0 ? "("+totalBasketItemCount+")" : "" }}</span></a
                   >
                   <div class="dropdown-menu" aria-labelledby="console-menu-3">
@@ -145,7 +145,7 @@
                             href="/uye-giris"
                             class="btn btn-block btn-color-1"
                           >
-                            Satın Al <img height="10" width="10" src="../assets/Right1.PNG" /></a>
+                            Satın Al <img height="10" width="10" src="../assets/icons/Right1.PNG" /></a>
                         </div>
                       </div>
                     </div>

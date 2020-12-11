@@ -195,7 +195,7 @@
                         href="/elektronik-c-154"
                         class="d-block mb-3"
                         ><img
-                          src="../assets/elektronik.png"
+                          src="../assets/icons/elektronik.png"
                           alt=""
                       /></a>
                     </div>
@@ -274,7 +274,7 @@
                         href="/ev-ofis-c-160"
                         class="d-block mb-3"
                         ><img
-                          src="../assets/ev-ofis.png"
+                          src="../assets/icons/ev-ofis.png"
                           alt=""
                       /></a>
                     </div>
@@ -365,7 +365,7 @@
                         href="/kisisel-bakim-c-165"
                         class="d-block mb-3"
                         ><img
-                          src="../assets/kisiselbakim.png"
+                          src="../assets/icons/kisiselbakim.png"
                           alt=""
                       /></a>
                     </div>
@@ -444,7 +444,7 @@
                         href="/otomotiv-yapi-market-c-170"
                         class="d-block mb-3"
                         ><img
-                          src="../assets/otomotiv-yapi.png"
+                          src="../assets/icons/otomotiv-yapi.png"
                           alt=""
                       /></a>
                     </div>

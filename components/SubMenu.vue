@@ -110,7 +110,7 @@
               <div class="logo-area">
                 <a href="/" class="logo"
                   ><img
-                    src="../assets/toptanalogo.png"
+                    src="../assets/icons/toptanalogo.png"
                     alt=""
                 /></a>
               </div>

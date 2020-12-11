@@ -12,7 +12,7 @@
 
 <script>
 import "bootstrap/dist/css/bootstrap.min.css";
-import ok from "../assets/ok.png";
+import ok from "../assets/icons/ok.png";
 
 export default {
   data() {

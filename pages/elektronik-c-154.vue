@@ -1051,7 +1051,7 @@
                                 <img
                                   height="20"
                                   width="60"
-                                  src="../assets/Yıldız.PNG"
+                                  src="../assets/icons/Yıldız.PNG"
                                 />
                               </div>
                               <div class="price-group">
@@ -1070,7 +1070,7 @@
                                 ><img
                                   height="20"
                                   width="20 "
-                                  src="../assets/ShoppingCarticon.png"
+                                  src="../assets/icons/ShoppingCarticon.png"
                                 />
                                 Sepete Ekle
                               </a>

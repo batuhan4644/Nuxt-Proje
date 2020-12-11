@@ -5,12 +5,12 @@
     <div class="scroll-olacak">
       <span class="ok sag">
         <button @click="kaydir(true)">
-          <img height="25" width="25" src="../assets/rightb.PNG" />
+          <img height="25" width="25" src="../assets/icons/rightb.PNG" />
         </button>
       </span>
       <span class="ok sol">
         <button @click="kaydir(false)" button="arrow-left">
-         <img height="25" width="25" src="../assets/leftb.PNG" />
+         <img height="25" width="25" src="../assets/icons/leftb.PNG" />
         </button>
       </span>
       <div
@@ -37,7 +37,7 @@
               </div>
             </div>
             <a href="/sepet" class="mt-3 w-75 btn btn-outline-secondary rounded-btn"
-              ><img height="20" width="20 " src="../assets/SepetEkle.PNG" /> Sepete Ekle</a
+              ><img height="20" width="20 " src="../assets/icons/SepetEkle.PNG" /> Sepete Ekle</a
             >
           </div>
         </div>
@@ -57,70 +57,70 @@ export default {
           eskiFiyat: 50.0,
           fiyat: 30,
           indirim: 40,
-          resim: require("../assets/ayakkabi.jpg"),
+          resim: require("../assets/icons/ayakkabi.jpg"),
         },
         {
           baslik: "Iphone P",
           eskiFiyat: 50000,
           fiyat: 25000,
           indirim: 50,
-          resim: require("../assets/telefon.jpg"),
+          resim: require("../assets/icons/telefon.jpg"),
         },
         {
           baslik: "Batuhan Ayakkabı",
           eskiFiyat: 50.0,
           fiyat: 30,
           indirim: 40,
-          resim: require("../assets/ayakkabi.jpg"),
+          resim: require("../assets/icons/ayakkabi.jpg"),
         },
         {
           baslik: "Iphone P",
           eskiFiyat: 50000,
           fiyat: 25000,
           indirim: 50,
-          resim: require("../assets/telefon.jpg"),
+          resim: require("../assets/icons/telefon.jpg"),
         },
         {
           baslik: "Orkun Ayakkabı",
           eskiFiyat: 50.0,
           fiyat: 30,
           indirim: 40,
-          resim: require("../assets/ayakkabi.jpg"),
+          resim: require("../assets/icons/ayakkabi.jpg"),
         },
         {
           baslik: "Iphone P",
           eskiFiyat: 50000,
           fiyat: 25000,
           indirim: 50,
-          resim: require("../assets/telefon.jpg"),
+          resim: require("../assets/icons/telefon.jpg"),
         },
         {
           baslik: "Batuhan Ayakkabı",
           eskiFiyat: 50.0,
           fiyat: 30,
           indirim: 40,
-          resim: require("../assets/ayakkabi.jpg"),
+          resim: require("../assets/icons/ayakkabi.jpg"),
         },
         {
           baslik: "Iphone P",
           eskiFiyat: 50000,
           fiyat: 25000,
           indirim: 50,
-          resim: require("../assets/telefon.jpg"),
+          resim: require("../assets/icons/telefon.jpg"),
         },
         {
           baslik: "Orkun Ayakkabı",
           eskiFiyat: 50.0,
           fiyat: 30,
           indirim: 40,
-          resim: require("../assets/ayakkabi.jpg"),
+          resim: require("../assets/icons/ayakkabi.jpg"),
         },
         {
           baslik: "Iphone P",
           eskiFiyat: 50000,
           fiyat: 25000,
           indirim: 50,
-          resim: require("../assets/telefon.jpg"),
+          resim: require("../assets/icons/telefon.jpg"),
         },
       ],
     };

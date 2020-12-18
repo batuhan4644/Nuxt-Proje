@@ -34,7 +34,37 @@ export default {
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
     // https://go.nuxtjs.dev/pwa
-    "@nuxtjs/pwa"
+    "@nuxtjs/pwa",
+    [
+      "@nuxtjs/firebase",
+      {
+        config: {
+          apiKey: "AIzaSyDUB-7wTKaPJ_DvGJFA2kzawq_2NEOlB5A",
+          authDomain: "toptanal.firebaseapp.com",
+          databaseURL: "https://toptanal-default-rtdb.firebaseio.com",
+          projectId: "toptanal",
+          storageBucket: "toptanal.appspot.com",
+          messagingSenderId: "951918692910",
+          appId: "1:951918692910:web:8bdc311bc9e01d38bfedbf",
+          measurementId: "G-KDR7ZLTVZ8"
+        },
+        services: {
+          auth: false,
+          firestore: false,
+          functions: false,
+          storage: false,
+          database: true,
+          messaging: false,
+          performance: false,
+          analytics: false,
+          remoteConfig: false
+        },
+        database: {
+          emulatorPort: 9000,
+          emulatorHost: "localhost"
+        }
+      }
+    ]
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)

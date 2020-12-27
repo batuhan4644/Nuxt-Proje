@@ -11,9 +11,14 @@
 import Navbar from "@/components/Navbar";
 import Megamenu from "../components/Megamenu.vue";
 import SubMenu from "../components/SubMenu.vue";
+import axios from "axios";
 export default {
   mounted() {
-    console.log(this.$fire);
+    const messageRef = this.$fire.database.ref("/");
+    axios.get(messageRef.toString() + ".json").then((res) => {
+      console.log(res.data);
+      this.$store.commit("product/setProducts", res.data);
+    });
   },
   components: {
     Navbar,

@@ -49,15 +49,8 @@ export default {
           measurementId: "G-KDR7ZLTVZ8"
         },
         services: {
-          auth: false,
-          firestore: false,
-          functions: false,
-          storage: false,
           database: true,
-          messaging: false,
-          performance: false,
-          analytics: false,
-          remoteConfig: false
+          auth: true
         },
         database: {
           emulatorPort: 9000,

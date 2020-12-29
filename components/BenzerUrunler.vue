@@ -10,7 +10,7 @@
       </span>
       <span class="ok sol">
         <button @click="kaydir(false)" button="arrow-left">
-         <img height="25" width="25" src="../assets/icons/leftb.PNG" />
+          <img height="25" width="25" src="../assets/icons/leftb.PNG" />
         </button>
       </span>
       <div
@@ -20,24 +20,33 @@
         class="urunler d-flex"
       >
         <div v-for="(urun, index) in urunler" :key="index" class="card urun">
-          <img class="card-img-top" :src="urun.resim" alt="Card image cap" />
+          <nuxt-link :to="'/urun-detay/' + urun.id">
+            <img class="card-img-top" :src="urun.image" alt="Card image cap" />
+          </nuxt-link>
           <div class="card-body text-center">
-            <h5 class="card-title">{{ urun.baslik }}</h5>
+            <h5 class="card-title">{{ urun.title }}</h5>
             <div
               class="d-flex flex-row justify-content-center align-items-center"
             >
               <div class="bg-danger text-light rounded p-2">
-                {{ urun.indirim }}%
+                {{ parseInt(100 - (urun.price / (urun.price + 200)) * 100) }}%
               </div>
               <div class="d-flex flex-column">
                 <span class="text-secondary"
-                  ><del> {{ urun.eskiFiyat }}TL </del></span
+                  ><del> {{ urun.price + 200 }}TL </del></span
                 >
-                <span> {{ urun.fiyat }}TL</span>
+                <span> {{ urun.price }}TL</span>
               </div>
             </div>
-            <a href="/sepet" class="mt-3 w-75 btn btn-outline-secondary rounded-btn"
-              ><img height="20" width="20 " src="../assets/icons/SepetEkle.PNG" /> Sepete Ekle</a
+            <a
+              href="/sepet"
+              class="mt-3 w-75 btn btn-outline-secondary rounded-btn"
+              ><img
+                height="20"
+                width="20 "
+                src="../assets/icons/SepetEkle.PNG"
+              />
+              Sepete Ekle</a
             >
           </div>
         </div>
@@ -47,81 +56,26 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
+  mounted() {
+    const messageRef = this.$fire.database.ref("/");
+    axios.get(messageRef.toString() + ".json").then((res) => {
+      console.log(res.data);
+      this.urunler = res.data;
+    });
+  },
   data() {
     return {
       left: 0,
       urunler: [
-        {
-          baslik: "Orkun Ayakkabı",
-          eskiFiyat: 50.0,
-          fiyat: 30,
-          indirim: 40,
-          resim: require("../assets/icons/ayakkabi.jpg"),
-        },
-        {
-          baslik: "Iphone P",
-          eskiFiyat: 50000,
-          fiyat: 25000,
-          indirim: 50,
-          resim: require("../assets/icons/telefon.jpg"),
-        },
-        {
-          baslik: "Batuhan Ayakkabı",
-          eskiFiyat: 50.0,
-          fiyat: 30,
-          indirim: 40,
-          resim: require("../assets/icons/ayakkabi.jpg"),
-        },
-        {
-          baslik: "Iphone P",
-          eskiFiyat: 50000,
-          fiyat: 25000,
-          indirim: 50,
-          resim: require("../assets/icons/telefon.jpg"),
-        },
-        {
-          baslik: "Orkun Ayakkabı",
-          eskiFiyat: 50.0,
-          fiyat: 30,
-          indirim: 40,
-          resim: require("../assets/icons/ayakkabi.jpg"),
-        },
-        {
-          baslik: "Iphone P",
-          eskiFiyat: 50000,
-          fiyat: 25000,
-          indirim: 50,
-          resim: require("../assets/icons/telefon.jpg"),
-        },
-        {
-          baslik: "Batuhan Ayakkabı",
-          eskiFiyat: 50.0,
-          fiyat: 30,
-          indirim: 40,
-          resim: require("../assets/icons/ayakkabi.jpg"),
-        },
-        {
-          baslik: "Iphone P",
-          eskiFiyat: 50000,
-          fiyat: 25000,
-          indirim: 50,
-          resim: require("../assets/icons/telefon.jpg"),
-        },
-        {
-          baslik: "Orkun Ayakkabı",
-          eskiFiyat: 50.0,
-          fiyat: 30,
-          indirim: 40,
-          resim: require("../assets/icons/ayakkabi.jpg"),
-        },
-        {
-          baslik: "Iphone P",
-          eskiFiyat: 50000,
-          fiyat: 25000,
-          indirim: 50,
-          resim: require("../assets/icons/telefon.jpg"),
-        },
+        // {
+        //   baslik: "Orkun Ayakkabı",
+        //   eskiFiyat: 50.0,
+        //   fiyat: 30,
+        //   indirim: 40,
+        //   resim: require("../assets/icons/ayakkabi.jpg"),
+        // },
       ],
     };
   },
@@ -158,14 +112,13 @@ export default {
 }
 .ok {
   padding: 5px;
- 
+
   border-radius: 30px;
   top: 30%;
   text-align: center;
   z-index: 9;
 
   position: absolute;
-
 }
 .sag {
   right: -5px;

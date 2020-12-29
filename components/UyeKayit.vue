@@ -16,6 +16,12 @@
                       <div class="p-g-m-h-i-title">Üye Girişi</div>
                     </div>
                   </div>
+                  <div v-if="error" class="alert alert-danger">
+                    Hatalı kullanıcı adı yada şifre
+                  </div>
+                  <div v-if="success" class="alert alert-success">
+                    Giriş Başarılı Yönlendiriliyorsunuz...
+                  </div>
                   <div class="p-g-mod-body p-g-mod-body-p-0">
                     <form
                       class="login-form"
@@ -29,7 +35,7 @@
                         type="text"
                         class="form-control m-input"
                         name="email"
-                        value=""
+                        v-model="email"
                       />
                       <div class="mt-3"></div>
                       <label>Şifre</label
@@ -37,16 +43,13 @@
                         type="password"
                         class="form-control m-input"
                         name="password"
-                        value=""
+                        v-model="password"
                       />
                       <div class="mt-3"></div>
-                     
-                               <a
-                              href="/IslemBasarili"
-                              class="btn btn-success"
-                            
-                              >Giriş Yap
-                            </a>
+                      <!-- href="/IslemBasarili" -->
+                      <button @click="login" class="btn btn-success">
+                        Giriş Yap
+                      </button>
                     </form>
                   </div>
                 </div>
@@ -77,10 +80,7 @@
                         <h4>Yeni Üyelik</h4>
                         Siteye henüz üye değilim ve üye olmak istiyorum.<br />
                         (Hesabınızı oluşturmak için butonu takip ediniz.)
-                        <br /><a
-                          href="/uye-ol"
-                          class="btn btn-primary"
-                        >
+                        <br /><a href="/uye-ol" class="btn btn-primary">
                           Üye Ol
                         </a>
                       </div>
@@ -97,3 +97,39 @@
 </template>
 
 
+<script>
+export default {
+  data() {
+    return {
+      email: "",
+      password: "",
+      error: false,
+      success: false,
+    };
+  },
+  mounted() {
+    console.log(this.$store.getters["user/getUser"]);
+  },
+  methods: {
+    login(e) {
+      e.preventDefault();
+      this.$fire.auth
+        .signInWithEmailAndPassword(this.email, this.password)
+        .then((res) => {
+          console.log("Giriş başarılı");
+          this.$store.commit("user/setUser", this.email);
+          setTimeout(() => {
+            window.location.href = "/";
+          }, 1500);
+
+          this.error = false;
+          this.success = true;
+        })
+        .catch((err) => {
+          console.log("Giriş başarısız");
+          this.error = true;
+        });
+    },
+  },
+};
+</script>

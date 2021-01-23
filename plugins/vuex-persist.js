@@ -4,4 +4,5 @@ export default ({ store }) => {
     new VuexPersistence({
         /* your options */
     }).plugin(store);
+
 }
